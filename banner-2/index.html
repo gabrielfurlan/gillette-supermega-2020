@@ -203,7 +203,6 @@
 		/* =========== FRAME 3 ========== */
     div.frame_3 {
       text-align: center;
-      padding-top: 20px;
       margin-left: -25px;
     }
 
@@ -418,11 +417,11 @@
 		}
 	</style>
 </head>
-<body>
+<body id="banner_2" onload="init()">
 	<div class="banner">
 
 		<!-- FRAME 1 -->
-		<div class="frame_1 _hide">
+		<div id="frame1" class="frame_1 _hide">
 			<h4 class="text_1">SABIA QUE
 				<img class="logo" src="assets/images/gillette-logo.png" />
 			</h4>
@@ -431,7 +430,7 @@
 		</div>
 
 		<!-- FRAME 2 -->
-		<div id='frame2' class="frame_2 _hide">
+		<div id="frame2" class="frame_2 _hide">
 			<img class="uefa" src="assets/images/uefa.svg" />
 			<div class="text_wrapper">
 				<h4 class="text_promotion">Promoção</h4>
@@ -460,7 +459,7 @@
 		</div>
 
 		<!-- FRAME 4 -->
-		<div class="frame_4 _hide">
+		<div id="frame4" class="frame_4 _hide">
 				<div class="text_wrapper">
 					<h4 class="text_promotion">CONCORRA!</h4>
 					<div class="row">
@@ -494,7 +493,7 @@
 		</div>
 
 		<!-- FRAME 5 -->
-		<div class="frame_5 _hide">
+		<div id="frame5" class="frame_5 _hide">
 			<div class="text_wrapper">
 				<div class="row">
 						<p class="text_group">
@@ -507,7 +506,7 @@
 		</div>
 
 		<!-- FOOTER -->
-		<footer class="footer">
+		<footer id="footer" class="footer">
 			<div class="wrapper">
 				<button class="button">CLIQUE E PARTICIPE</button>
 				<img class="uefa _hide" src="assets/images/uefa.svg" />
@@ -520,5 +519,136 @@
         </p>
 			</div>
 		</footer>
+		<script>
+      var framesDOM = {
+        frame1: document.querySelector('#frame1'),
+        frame2: document.querySelector('#frame2'),
+        frame3: document.querySelector('#frame3'),
+        frame4: document.querySelector('#frame4'),
+        frame5: document.querySelector('#frame5'),
+      };
+
+      var footerDOM = {
+        uefa: document.querySelector('#footer .uefa'),
+        logo: document.querySelector('#footer .gillette_logo'),
+        eula: document.querySelector('#footer .eula'),
+      }
+
+      function hideAllFrames() {
+        Object.keys(framesDOM).forEach(function(key) {
+          if (framesDOM[key]) framesDOM[key].classList.add('_hide');
+        });
+      };
+
+      var configuration = {};
+      configuration.frame1 = {
+        next: 'frame2',
+        background: 'assets/images/bg-1.png',
+        inAction: function () {
+          framesDOM.frame1.classList.remove('_hide');
+        },
+        outAction: function () {},
+        time: 2000,
+        footer: {
+          eula: false,
+          logo: true,
+          uefa: true,
+        },
+      };
+
+      configuration.frame2 = {
+        next: 'frame3',
+        background: 'assets/images/bg-2.png',
+        inAction: function () {
+          framesDOM.frame2.classList.remove('_hide');
+        },
+        time: 2000,
+        footer: {
+          eula: false,
+          logo: false,
+          uefa: false,
+        },
+      };
+      
+			configuration.frame3 = {
+        next: 'frame4',
+        background: 'assets/images/bg-3.jpg',
+        inAction: function () {
+          framesDOM.frame3.classList.remove('_hide');
+        },
+        time: 2000,
+        footer: {
+          eula: true,
+          logo: false,
+          uefa: false,
+        },
+      };
+			
+			configuration.frame4 = {
+        next: 'frame5',
+        background: 'assets/images/bg-3.jpg',
+        inAction: function () {
+          framesDOM.frame4.classList.remove('_hide');
+        },
+        time: 2000,
+        footer: {
+          eula: true,
+          logo: false,
+          uefa: false,
+        },
+      };
+			
+			configuration.frame5 = {
+        next: 'frame1',
+        background: 'assets/images/bg-3.jpg',
+        inAction: function () {
+          framesDOM.frame5.classList.remove('_hide');
+        },
+        time: 2000,
+        footer: {
+          eula: false,
+          logo: true,
+          uefa: true,
+        },
+      };
+
+      function setFooter(footerData) {
+        if (footerData.eula) {
+          footerDOM.eula.classList.remove('_hide');
+        } else {
+          footerDOM.eula.classList.add('_hide');
+        }
+
+        if (footerData.logo) {
+          footerDOM.logo.classList.remove('_hide');
+        } else {
+          footerDOM.logo.classList.add('_hide');
+        }
+
+        if (footerData.uefa) {
+          footerDOM.uefa.classList.remove('_hide');
+        } else {
+          footerDOM.uefa.classList.add('_hide');
+        }
+      };
+
+      function init() {
+        function next(f) {
+          const nextFrame = configuration[f.next];
+          hideAllFrames();
+          console.log(nextFrame.background);
+          document.querySelector('.banner').style.backgroundImage = 'url(\"' + nextFrame.background + '")';
+          setFooter(nextFrame.footer);
+          nextFrame.inAction();
+          setTimeout(function () {
+            next(nextFrame);
+          }, nextFrame.time);
+        }
+
+        setTimeout(function () {
+          next(configuration.frame1);
+        }, configuration.frame1.time);
+      };
+    </script>
 	</body>
 </html>
