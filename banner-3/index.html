@@ -130,6 +130,131 @@
       text-transform: uppercase;
     }
 
+
+		/* =========== FRAME 3 =========== */
+    div.frame_3 {
+      text-align: center;
+      padding-top: 35px;
+    }
+
+		div.frame_3 > div.wrapper {
+			display: inline-block;
+      text-align: left;
+		}
+
+    div.frame_3 > div.wrapper > img.logo {
+      height: 25px;
+      margin-bottom: 8px;
+    }
+
+    div.frame_3 > div.wrapper > h4.title {
+			font-family: Futura Std, sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 1em;
+      margin-bottom: -1px;
+      text-transform: uppercase;
+      color: #FFCB05;
+    }
+
+    div.frame_3 > div.wrapper > div.number {
+			display: inline-block;
+      font-family: Futura Std, sans-serif;
+			font-weight: 700;
+			color: #ffcb05;
+			font-size: 75px;
+      letter-spacing: -15px;
+      margin-right: 15px;
+      margin-left: -10px;
+    }
+
+    div.frame_3 > div.wrapper > div.text_wrapper {
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 8px;
+    }
+
+    div.frame_3 > div.wrapper > div.text_wrapper > h4.text {
+      display: inline-block;
+      width: 110px;
+      font-family: Futura Std, sans-serif;
+      color: #FFFFFF;
+      font-weight: 200;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    div.frame_3 > div.wrapper > div.text_wrapper > h4.text > span.strong {
+			color: #ffcb05;
+      font-weight: 700;
+    }
+
+    div.frame_3 > div.wrapper > div.text_wrapper > h4.text_uefa {
+      font-family: Futura Std, sans-serif;
+      font-weight: 400;
+      font-stretch: condensed;
+      color: #FFFFFF;
+      text-transform: uppercase;
+    }
+
+		/* =========== FRAME 4 =========== */
+    div.frame_4 {
+      text-align: center;
+      padding-top: 20px;
+    }
+
+		div.frame_4 > div.wrapper {
+			display: inline-block;
+		}
+
+		div.frame_4 > div.wrapper > img.ps4 {
+			height: 95px;
+		}
+	
+		div.frame_4 > div.wrapper > .trip_legend {
+			font-size: 10px;
+		}
+    
+		div.frame_4 > div.wrapper > .trip_legend > .number {
+			font-family: Futura Std, sans-serif;
+			font-weight: 700;
+			display: inline-block;
+			color: #ffcb05;
+			font-size: 75px;
+      line-height: 0.89em;
+      vertical-align: top;
+			font-stretch: condensed;
+		}
+
+		div.frame_4 > div.wrapper > .trip_legend > p.text_group {
+			font-family: Futura Std, sans-serif;
+			display: inline-block;
+      vertical-align: top;
+			text-align: left;
+			font-size: 14px;
+      margin-left: -12px;
+			color: #FFF;
+			letter-spacing: 0px;
+		}
+
+		div.frame_4 > div.wrapper > .trip_legend > p > span .diferent {
+			font-weight: 900;
+			color: #ffcb05;
+		}
+		div.frame_4 > div.wrapper > .trip_legend > p > span.uefa {
+			font-stretch: condensed;     
+		}
+
+		div.frame_4 > div.wrapper > .trip_legend > p > span {
+			display: block;
+		}
+
+		div.frame_4 > div.wrapper > .plus {
+			display: block;
+			color: #FFF;
+			font-size: 46px;
+		}
+
     /* =========== FRAME 5 =========== */
 		div.frame_5 {
 			font-family: Futura Std, sans-serif;
@@ -222,6 +347,7 @@
 			font-weight: 700;
 			font-size: 10px;
 			padding: 5px;
+      margin-top: 10px;
 			color: #1D214F;
 			border-radius: 2px;
 		}
@@ -278,10 +404,39 @@
 <body id="page" onload="">
 	<div class="banner">
     <!-- FRAME 1 -->
-    <div id="frame1" class="frame_1">
+    <div id="frame1" class="frame_1 _hide">
       <h4 class="text_1">Você já sonhou</h4>
       <h4 class="text_2">Em ir para a</h4>
       <h4 class="text_3">UEFA CHAMPIONS LEAGUE</h4>
+    </div>
+
+    <!-- FRAME 3 -->
+    <div id="frame3" class="frame_3">
+      <div class="wrapper">
+        <img class="logo" src="assets/images/gillette-logo.png" />
+        <h4 class="title">Está sorteando</h4>
+        <div class="number">10</div>
+        <div class="text_wrapper">
+          <h4 class="text">
+            <span class="strong">Viagens</span> com acompanhante para a
+          </h4>
+          <h4 class="text_uefa">UEFA Champions League</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRAME 4 -->
+    <div id="frame4" class="frame_4 _hide">
+      <div class="wrapper">
+          <img class="ps4" src="assets/images/ps4.png" />
+          <div class="trip_legend">
+            <p class="number">1</p>
+            <p class="text_group">
+              <span><span class="diferent">PLAYSTATION 4</span></span>
+              <span>TODO DIA</span>
+            </p>
+          </div>
+        </div>
     </div>
 
     <!-- FRAME 5 -->
@@ -304,12 +459,12 @@
 		<footer id="footer" class="footer">
 			<div class="wrapper">
 				<button class="button">SAIBA COMO PARTICIPAR</button>
-				<img class="uefa" src="assets/images/uefa.svg" />
-				<div class="gillette_logo">
+				<img class="uefa _hide" src="assets/images/uefa.svg" />
+				<div class="gillette_logo _hide">
 					<img class="logo" src="assets/images/gillette-logo.png" />
 					<img class="logo-signature" src="assets/images/gillette-logo-signature.png" />
         </div>
-        <p class="eula _hide">
+        <p class="eula">
           Correspondente aos dias de participação na promoção com sorteios quinzenais. PlayStation e PS4 são marcas registradas da Sony Interactive Entertainment Inc.. Particiapação válida para maiores de 16 anos com passaporte valido até 31/12/2020 para compras e posterior cadastro realizados entre 01/03 e 24/04/2020, para o sorteio das viagens e até 15/05/2020 para o sorteio dos videogames (horario de Brasília), limitada a 12 números da sorte por CPF. Guarde cada comprovante fiscal de compra não manual cadastrado. Antes de participar, consulte os produtos participantes e leia os Regulamentos completos no site. As palavras UEFA, CHAMPIONS LEAGUE e todas as outras marcas, nomes, logos, mascotes e troféus da UEFA CHAMPIONS LEAGUE são propriedade, marcas registradas, desenhos e/ou direitos autorais da UEFA. Todos os direitos reservados.
         </p>
 			</div>
