@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>CLUSTER SKUs ESPECÍFICOS</title>
+	<title>CLUSTER GAMERS</title>
 	<style>
 		@font-face {
 			font-family: Futura Std;
@@ -85,135 +85,73 @@
 		/* =========== FRAME 1 ========== */
 		div.frame_1 {
 			display: inline-block;
-			text-align: left;
-			padding-top: 58px;
+			text-align: center;
+			padding-top: 20px;
 		}
 
-		div.frame_1 h4.text_1 {
+		div.frame_1 h4.text {
 			font-family: Futura Std, sans-serif;
 			font-weight: 700;
-			font-size: 19px;
+			font-size: 15px;
 			line-height: 27px;
 			color: #FFFFFF;
 			letter-spacing: 2px;
 			
 		}
-		div.frame_1 h4.text_2 {
-			font-family: Futura Std, sans-serif;
-			font-weight: 700;
-			font-size: 19px;
-			line-height: 27px;
-			color: #FFFFFF;
-			letter-spacing: 2px;
-		}
 		
-		div.frame_1 h4.text_small {
-			font-family: Futura Std, sans-serif;
-			font-weight: 700;
-			font-size: 18px;
-			line-height: 27px;
-			color: #FFFFFF;
-			letter-spacing: 1px;
+		div.frame_1 h4.text .diferent {
+      color: #FFCB05;
+		}
 
-      font-stretch: condensed;     
-      /* font-style: oblique; */
-			text-transform: uppercase;
-      vertical-align: middle;
-      margin-bottom: 10
-		}
-		
-		div.frame_1 h4 img.logo {
-			height: 25px;
+		div.frame_1 img {
+			height: 100px;
 		}
 
 		/* =========== FRAME 2 ========== */
 		div.frame_2 {
-			font-family: Futura Std, sans-serif;
-      text-align: center;
-      padding-top: 38px;
-		}
-
-		div.frame_2 h4 {
 			display: inline-block;
+			text-align: center;
+			padding-top: 70px;
+		}
+
+		div.frame_2 h4.text {
+			font-family: Futura Std, sans-serif;
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 27px;
 			color: #FFFFFF;
+			letter-spacing: 2px;
+			
 		}
-
-    div.frame_2 > div.text_wrapper > div.row._margin-left {
-      position: relative;
-    }
-
-    div.frame_2 > div.text_wrapper {
-      display: inline-block;
-      text-align: left;
-      transform: rotate(-5deg);
-    }
-
-		div.frame_2 > div.text_wrapper > h4.text_promotion {
-			font-family: Futura Std, sans-serif;
-			font-weight: 300;
-      font-size: 14px;
-			font-style: oblique;
-			text-transform: uppercase;
-      line-height: 1em;
-      margin-bottom: 5px;
-      margin-left: 5px;      
-		} 
-
-		div.frame_2 > div.text_wrapper > div.row > h4.text_you {
-			font-family: Futura Std, sans-serif;
-			font-weight: 900;
-      font-stretch: condensed;     
-      font-style: oblique;
-      font-size: 58px;
-			text-transform: uppercase;
-      line-height: 1em;
-      vertical-align: middle;
-      margin-bottom: 10
-		} 
-
-    div.frame_2 > div.text_wrapper > div.row > h4.text_in {
-			font-family: Futura Std, sans-serif;
-			font-weight: 200;
-      font-style: oblique;
-      font-size: 32px;
-			text-transform: uppercase;
-      line-height: 1em;
-      margin-left: 5px;
-      vertical-align: middle;
-		} 
-
-		div.frame_2 > img.uefa {
-			position: absolute;
-			right: 10px;
-			top: 10px;
-			height: 60px;
-		}
-    
-    div.frame_2 > div.text_wrapper > div.row > h4.text_uefa,
-    div.frame_2 > div.text_wrapper > div.row > h4.text_champions,
-    div.frame_2 > div.text_wrapper > div.row > h4.text_league {
-			font-family: Futura Std, sans-serif;
+		
+		div.frame_2 h4.text .diferent {
+      color: #FFCB05;
 			font-weight: 700;
-      font-size: 16px;
-			text-transform: uppercase;
-      line-height: 1em;
-      vertical-align: middle;
-		} 
+		}
 
 		/* =========== FRAME 3 ========== */
     div.frame_3 {
       text-align: center;
-      margin-left: -25px;
     }
+    div.frame_3 > img.logo {
+			height: 20px;
+			display: block;
+		}
 
-    div.frame_3 > span.number {
+    div.frame_3  > div.text_wrapper > span.number {
       font-family: Futura Std;
       font-weight: 700;
-      font-size: 135px;
-      line-height: 135px;
+      font-size: 78px;
+      line-height: 78px;
       color: #FFCB05;
       vertical-align: middle;
+			display: inline-block;
     }
+
+    div.frame_3  > div.text_wrapper > div.text_group {
+			display: inline-block;
+		}
+
     
     div.frame_3 > img.products {
       position: relative;
@@ -227,9 +165,6 @@
       display: inline-block;
       vertical-align: middle;
       text-align: left;
-      margin-left: -20px;
-      margin-top: -12px;
-      z-index: 3;
     }
 
     div.frame_3 > div.text_wrapper > h4.text_1 {
@@ -417,43 +352,33 @@
 		}
 	</style>
 </head>
-<body id="banner_2" onload="init()">
+<body id="banner_2" onload="'init()'">
 	<div class="banner">
 
 		<!-- FRAME 1 -->
 		<div id="frame1" class="frame_1 _hide">
-			<h4 class="text_1">SABIA QUE
-				<img class="logo" src="assets/images/gillette-logo.png" />
-			</h4>
-			<h4 class="text_2">PODE TE LEVAR PARA</h4>
-			<h4 class="text_small">UEFA CHAMPIONS LEAGUE?</h4>
+			<h4 class="text">VOCÊ JÁ SONHOU EM</h4>
+			<h4 class="text">GANHAR UM <span class="diferent">PLAYSTATION 4?</span></h4>
+			<img class="ps4" src="assets/images/ps4.png" />
 		</div>
 
 		<!-- FRAME 2 -->
 		<div id="frame2" class="frame_2 _hide">
-			<img class="uefa" src="assets/images/uefa.svg" />
-			<div class="text_wrapper">
-				<h4 class="text_promotion">Promoção</h4>
-				<div class="row">
-					<h4 class="text_you">Você</h4>
-					<h4 class="text_in">Na</h4>
-				</div>
-				<div class="row _margin-left">
-					<h4 class="text_uefa">UEFA</h4>
-					<h4 class="text_champions">CHAMPIONS</h4>
-					<h4 class="text_league">LEAGUE</h4>
-				</div>
-			</div>
+			<h4 class="text">CHEGOU A HORA DE</h4>
+			<h4 class="text">REALIZAR ESSE <span class="diferent">SONHO!</span></h4>
 		</div>
 
 		<!-- FRAME 3 -->
     <div id="frame3" class="frame_3">
-      <span class="number">1</span>
+			<img class="logo" src="assets/images/gillette-logo.png" />
+			<h4 class="title">ESTÁ SORTEANDO</h4>
       <div class="text_wrapper">
-        <h4 class="text_1">Compre Produtos</h4>
-        <img class="logo" src="assets/images/gillette-logo.png" />
-        <h4 class="text_1">Edição especial</h4>
-        <h4 class="text_2">UEFA CHAMPIONS LEAGUE.</h4>
+				<span class="number">1</span>
+				<div class="text-group">
+					<h4 class="hight">PLAYSTATION 4</h4>
+					<h4 class="text">TODO DIA</h4>
+				</div>
+				<img class="ps4" src="assets/images/ps4.png" />
       </div>
       <img class="products" src="assets/images/gillette-products.png" />      
 		</div>
@@ -508,7 +433,7 @@
 		<!-- FOOTER -->
 		<footer id="footer" class="footer">
 			<div class="wrapper">
-				<button class="button">CLIQUE E PARTICIPE</button>
+				<button class="button">SAIBA COMO PARTICIPAR</button>
 				<img class="uefa _hide" src="assets/images/uefa.svg" />
 				<div class="gillette_logo _hide">
 					<img class="logo" src="assets/images/gillette-logo.png" />
@@ -558,20 +483,20 @@
 
       configuration.frame2 = {
         next: 'frame3',
-        background: 'assets/images/bg-2.png',
+        background: 'assets/images/bg-4.png',
         inAction: function () {
           framesDOM.frame2.classList.remove('_hide');
         },
         time: 2000,
         footer: {
           eula: false,
-          logo: false,
+          logo: true,
           uefa: false,
         },
       };
       
 			configuration.frame3 = {
-        next: 'frame4',
+        next: 'frame1',
         background: 'assets/images/bg-3.jpg',
         inAction: function () {
           framesDOM.frame3.classList.remove('_hide');
