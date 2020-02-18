@@ -8,22 +8,45 @@
 	<style>
 		@font-face {
 			font-family: Futura Std;
-			src: url("assets/fonts/futura/FuturaStd-Light.ttf");
+			src: url("assets/fonts/futura/FuturaStd-Light.otf");
 			font-weight: 200;
+      font-style: normal;
+		}
+
+    @font-face {
+			font-family: Futura Std;
+			src: url("assets/fonts/futura/FuturaStd-CondensedLight.ttf");
+			font-weight: 200;
+      font-stretch: condensed;     
 			font-style: normal;
 		}
 
 		@font-face {
 			font-family: Futura Std;
-			src: url("assets/fonts/futura/FuturaStd-LightOblique.ttf") format('truetype');
+			src: url("assets/fonts/futura/FuturaStd-LightOblique.otf");
 			font-weight: 200;
 			font-style: oblique;
+		}
+
+    @font-face {
+			font-family: Futura Std;
+			src: url("assets/fonts/futura/FuturaStd-Book.otf");
+			font-weight: 300;
+			font-style: normal;
 		}
 
 		@font-face {
 			font-family: Futura Std;
 			src: url("assets/fonts/futura/FuturaStd-Normal.ttf") format('truetype');
 			font-weight: 400;
+			font-style: normal;
+		}
+
+    @font-face {
+			font-family: Futura Std;
+			src: url("assets/fonts/futura/FuturaStd-Condensed.otf");
+			font-weight: 400;
+      font-stretch: condensed;
 			font-style: normal;
 		}
 
@@ -78,7 +101,7 @@
 			overflow: hidden;
 		}
 
-		/* frame 1 */
+		/* =========== FRAME 1 =========== */
 		div.frame_1 {
 			text-align: center;
 			padding-top: 58px;
@@ -88,12 +111,12 @@
 			font-family: Futura Std, sans-serif;
 			font-weight: 700;
 			font-size: 23px;
-			line-height: 27px;
+			line-height: 30px;
 			color: #FFFFFF;
 			letter-spacing: 2px;
 		}
 
-		/* frame 2 */
+		/* =========== FRAME 2 =========== */
 		div.frame_2 {
 			font-family: Futura Std, sans-serif;
       text-align: center;
@@ -117,13 +140,14 @@
 
 		div.frame_2 > div.text_wrapper > h4.text_promotion {
 			font-family: Futura Std, sans-serif;
-			font-weight: 300;
+			font-weight: 200;
       font-size: 14px;
 			font-style: oblique;
+      font-stretch: condensed;     
 			text-transform: uppercase;
       line-height: 1em;
       margin-bottom: 5px;
-      margin-left: 5px;      
+      margin-left: 10px;      
 		} 
 
 		div.frame_2 > div.text_wrapper > div.row > h4.text_you {
@@ -135,17 +159,18 @@
 			text-transform: uppercase;
       line-height: 1em;
       vertical-align: middle;
-      margin-bottom: 10
+      margin-bottom: 10;
 		} 
 
     div.frame_2 > div.text_wrapper > div.row > h4.text_in {
 			font-family: Futura Std, sans-serif;
 			font-weight: 200;
       font-style: oblique;
+      font-stretch: condensed;     
       font-size: 32px;
 			text-transform: uppercase;
       line-height: 1em;
-      margin-left: 5px;
+      margin-left: 8px;
       vertical-align: middle;
 		} 
     
@@ -153,13 +178,72 @@
     div.frame_2 > div.text_wrapper > div.row > h4.text_champions,
     div.frame_2 > div.text_wrapper > div.row > h4.text_league {
 			font-family: Futura Std, sans-serif;
-			font-weight: 700;
-      font-size: 16px;
+			font-weight: 900;
+      font-stretch: condensed;
+      font-size: 18px;
 			text-transform: uppercase;
       line-height: 1em;
       vertical-align: middle;
 		} 
 
+    /* =========== FRAME 3 ========== */
+    div.frame_3 {
+      text-align: center;
+      padding-top: 20px;
+      margin-left: -25px;
+    }
+
+    div.frame_3 > span.number {
+      font-family: Futura Std;
+      font-weight: 700;
+      font-size: 135px;
+      line-height: 135px;
+      color: #FFCB05;
+      vertical-align: middle;
+    }
+    
+    div.frame_3 > img.products {
+      position: relative;
+      top: -50px;
+      left: 15px;
+      width: 110px;
+    }
+
+    div.frame_3 > div.text_wrapper {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: left;
+      margin-left: -20px;
+      margin-top: -12px;
+      z-index: 3;
+    }
+
+    div.frame_3 > div.text_wrapper > h4.text_1 {
+			font-family: Futura Std, sans-serif;
+      font-weight: 200;
+      font-size: 21px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    div.frame_3 > div.text_wrapper > img.logo {
+      height: 20px;
+      margin-bottom: 3px;
+    } 
+
+    div.frame_3 > div.text_wrapper > h4.text_2 {
+      font-family: Futura Std, sans-serif;
+			font-weight: 400;
+      font-stretch: condensed;
+      color: #FFFFFF;
+      font-size: 20px;
+			text-transform: uppercase;
+      line-height: 1em;
+    }
+
+		/* =========== FOOTER =========== */
 		footer.footer {
 			position: absolute;
 			width: 100%;
@@ -216,6 +300,19 @@
 			height: 12px;
 		}
 
+    footer.footer > div.wrapper > p.eula {
+      width: 100%;
+			position: absolute;
+      bottom: 0px;
+      left: 0;
+      padding: 5px;
+      text-align: left;
+      font-family: Futura Std;
+      font-weight: 300;
+      font-size: 4px;
+      color: white;
+    }
+
 		._hide {
 			display: none;
 		}
@@ -223,32 +320,52 @@
 </head>
 <body>
 	<div class="banner">
-		<div class="frame_1 _hide">
+    <!-- FRAME 1 -->
+		<div id="frame1" class="frame_1 _hide">
 			<h4 class="text">QUER IR PARA</h4>
 			<h4 class="text _condensed">UEFA CHAMPIONS</h4>
-		</div>
-		<div class="frame_2">
-				<div class="text_wrapper">
-					<h4 class="text_promotion">Promoção</h4>
-					<div class="row">
-						<h4 class="text_you">Você</h4>
-						<h4 class="text_in">Na</h4>
-					</div>
-					<div class="row _margin-left">
-						<h4 class="text_uefa">UEFA</h4>
-						<h4 class="text_champions">CHAMPIONS</h4>
-						<h4 class="text_league">LEAGUE</h4>
-					</div>
-				</div>
-			</div>
+    </div>
+    
+    <!-- FRAME 2 -->
+		<div id="frame2" class="frame_2 _hide">
+      <div class="text_wrapper">
+        <h4 class="text_promotion">Promoção</h4>
+        <div class="row">
+          <h4 class="text_you">Você</h4>
+          <h4 class="text_in">Na</h4>
+        </div>
+        <div class="row _margin-left">
+          <h4 class="text_uefa">UEFA</h4>
+          <h4 class="text_champions">CHAMPIONS</h4>
+          <h4 class="text_league">LEAGUE</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRAME 3 -->
+    <div id="frame3" class="frame_3">
+      <span class="number">1</span>
+      <div class="text_wrapper">
+        <h4 class="text_1">Compre Produtos</h4>
+        <img class="logo" src="assets/images/gillette-logo.png" />
+        <h4 class="text_1">Edição especial</h4>
+        <h4 class="text_2">UEFA CHAMPIONS LEAGUE.</h4>
+      </div>
+      <img class="products" src="assets/images/gillette-products.png" />      
+    </div>
+
+    <!-- FOOTER -->
 		<footer class="footer">
 			<div class="wrapper">
 				<button class="button">CLIQUE E PARTICIPE</button>
-				<img class="uefa" src="assets/images/uefa.svg" />
-				<div class="gillette_logo">
+				<img class="uefa _hide" src="assets/images/uefa.svg" />
+				<div class="gillette_logo _hide">
 					<img class="logo" src="assets/images/gillette-logo.png" />
 					<img class="logo-signature" src="assets/images/gillette-logo-signature.png" />
-				</div>
+        </div>
+        <p class="eula">
+          Correspondente aos dias de participação na promoção com sorteios quinzenais. PlayStation e PS4 são marcas registradas da Sony Interactive Entertainment Inc.. Particiapação válida para maiores de 16 anos com passaporte valido até 31/12/2020 para compras e posterior cadastro realizados entre 01/03 e 24/04/2020, para o sorteio das viagens e até 15/05/2020 para o sorteio dos videogames (horario de Brasília), limitada a 12 números da sorte por CPF. Guarde cada comprovante fiscal de compra não manual cadastrado. Antes de participar, consulte os produtos participantes e leia os Regulamentos completos no site. As palavras UEFA, CHAMPIONS LEAGUE e todas as outras marcas, nomes, logos, mascotes e troféus da UEFA CHAMPIONS LEAGUE são propriedade, marcas registradas, desenhos e/ou direitos autorais da UEFA. Todos os direitos reservados.
+        </p>
 			</div>
 		</footer>
 	</div>
