@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CLUSTER GENÉRICO MECÂNICA</title>
+	<style>
+		@font-face {
+			font-family: Futura Std;
+			src: url("assets/fonts/futura/FuturaStd-Light.otf");
+			font-weight: 200;
+      font-style: normal;
+		}
+
+    @font-face {
+			font-family: Futura Std;
+			src: url("assets/fonts/futura/FuturaStd-CondensedLight.ttf");
+			font-weight: 200;
+      font-stretch: condensed;     
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: Futura Std;
+			src: url("assets/fonts/futura/FuturaStd-LightOblique.otf");
+			font-weight: 200;
+			font-style: oblique;
+		}
+
+    @font-face {
+			font-family: Futura Std;
+			src: url("assets/fonts/futura/FuturaStd-Book.otf");
+			font-weight: 300;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: Futura Std;
+			src: url("assets/fonts/futura/FuturaStd-Normal.ttf") format('truetype');
+			font-weight: 400;
+			font-style: normal;
+		}
+
+    @font-face {
+			font-family: Futura Std;
+			src: url("assets/fonts/futura/FuturaStd-Condensed.otf");
+			font-weight: 400;
+      font-stretch: condensed;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: Futura Std;
+			src: url("assets/fonts/futura/FuturaStd-Bold.otf");
+			font-weight: 700;
+			font-style: normal;
+		}
+
+    @font-face {
+			font-family: Futura Std;
+			src: url("assets/fonts/futura/FuturaStd-BoldOblique.otf");
+			font-weight: 700;
+			font-style: oblique;
+		}
+    
+    @font-face {
+      font-family: Futura Std;
+			src: url("assets/fonts/futura/FuturaStd-CondensedBold.otf");
+			font-weight: 700;
+      font-stretch: condensed;     
+    }
+
+		@font-face {
+			font-family: Futura Std;
+			src: url("assets/fonts/futura/FuturaStd-CondensedExtraBd.otf");
+			font-weight: 900;
+      font-stretch: condensed;     
+		}
+		
+    @font-face {
+			font-family: Futura Std;
+			src: url("assets/fonts/futura/FuturaStd-ExtraBold.ttf");
+			font-weight: 900;
+			font-style: normal;
+		}
+
+		* {
+			padding: 0;
+			margin: 0;
+			border: 0;
+			box-sizing: border-box;
+		}
+
+		div.banner {
+			position: relative;
+			width: 300px;
+			height: 250px;
+			background-color: #f1f1f1;
+			background-image: url("assets/images/bg-1.png");
+			background-size: cover;
+      background-position: center bottom;
+			overflow: hidden;
+		}
+
+		/* =========== FRAME 1 =========== */
+		div.frame_1 {
+			font-family: Futura Std, sans-serif;
+      text-align: center;
+      padding-top: 45px;
+      color: #FFFFFF;
+		}
+
+    div.frame_1 > h4.text_1 {
+      font-weight: 700;
+      font-size: 23px;
+      text-transform: uppercase;
+    }
+
+    div.frame_1 > h4.text_2 {
+      font-weight: 700;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    div.frame_1 > h4.text_3 {
+      font-stretch: condensed;
+      font-weight: 700;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    /* =========== FRAME 5 =========== */
+		div.frame_5 {
+			font-family: Futura Std, sans-serif;
+      text-align: center;
+      padding-top: 38px;
+		}
+
+		div.frame_5 h4 {
+			display: inline-block;
+			color: #FFFFFF;
+		}
+
+    div.frame_5 > div.text_wrapper > div.row._margin-left {
+      position: relative;
+    }
+
+    div.frame_5 > div.text_wrapper {
+      display: inline-block;
+      text-align: left;
+      transform: rotate(-5deg);
+    }
+
+		div.frame_5 > div.text_wrapper > h4.text_promotion {
+			font-family: Futura Std, sans-serif;
+			font-weight: 200;
+      font-size: 14px;
+			font-style: oblique;
+      font-stretch: condensed;     
+			text-transform: uppercase;
+      line-height: 1em;
+      margin-bottom: 5px;
+      margin-left: 10px;      
+		} 
+
+		div.frame_5 > div.text_wrapper > div.row > h4.text_you {
+			font-family: Futura Std, sans-serif;
+			font-weight: 900;
+      font-stretch: condensed;     
+      font-style: oblique;
+      font-size: 58px;
+			text-transform: uppercase;
+      line-height: 1em;
+      vertical-align: middle;
+      margin-bottom: 10;
+		} 
+
+    div.frame_5 > div.text_wrapper > div.row > h4.text_in {
+			font-family: Futura Std, sans-serif;
+			font-weight: 200;
+      font-style: oblique;
+      font-stretch: condensed;     
+      font-size: 32px;
+			text-transform: uppercase;
+      line-height: 1em;
+      margin-left: 8px;
+      vertical-align: middle;
+		} 
+    
+    div.frame_5 > div.text_wrapper > div.row > h4.text_uefa,
+    div.frame_5 > div.text_wrapper > div.row > h4.text_champions,
+    div.frame_5 > div.text_wrapper > div.row > h4.text_league {
+			font-family: Futura Std, sans-serif;
+			font-weight: 900;
+      font-stretch: condensed;
+      font-size: 18px;
+			text-transform: uppercase;
+      line-height: 1em;
+      vertical-align: middle;
+		}
+
+		/* =========== FOOTER =========== */
+		footer.footer {
+			position: absolute;
+			width: 100%;
+			height: 75px;
+			bottom: 0;
+		}
+
+		footer.footer > div.wrapper {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+		}
+
+		footer.footer > div.wrapper > button.button {
+			display: inline-block;
+			background-color: #FFCB05;
+			font-family: Futura Std, sans-serif;
+			font-weight: 700;
+			font-size: 10px;
+			padding: 5px;
+			color: #1D214F;
+			border-radius: 2px;
+		}
+
+		footer.footer > div.wrapper > img.uefa {
+			position: absolute;
+			width: 65px;
+			bottom: 5px;
+			left: 10px;
+		}
+		
+		footer.footer > div.wrapper > div.gillette_logo {
+			position: absolute;
+			width: 200px;
+			height: 100%;
+			bottom: -7px;
+			right: 0;
+			background-image: url("assets/images/wedge.png");
+			background-size: cover;
+		}
+
+		footer.footer > div.wrapper > div.gillette_logo > img.logo {
+			position: absolute;
+			bottom: 26px;
+			right: 10px;
+			height: 14px;
+		}
+
+		footer.footer > div.wrapper > div.gillette_logo > img.logo-signature {
+			position: absolute;
+			bottom: 12px;
+			right: 10px;
+			height: 12px;
+		}
+
+    footer.footer > div.wrapper > p.eula {
+      width: 100%;
+			position: absolute;
+      bottom: 0px;
+      left: 0;
+      padding: 5px;
+      text-align: left;
+      font-family: Futura Std;
+      font-weight: 300;
+      font-size: 4px;
+      color: white;
+    }
+
+		._hide {
+			display: none;
+		}
+  </style>
+</head>
+<body id="page" onload="">
+	<div class="banner">
+    <!-- FRAME 1 -->
+    <div id="frame1" class="frame_1">
+      <h4 class="text_1">Você já sonhou</h4>
+      <h4 class="text_2">Em ir para a</h4>
+      <h4 class="text_3">UEFA CHAMPIONS LEAGUE</h4>
+    </div>
+
+    <!-- FRAME 5 -->
+		<div id="frame5" class="frame_5 _hide">
+      <div class="text_wrapper">
+        <h4 class="text_promotion">Promoção</h4>
+        <div class="row">
+          <h4 class="text_you">Você</h4>
+          <h4 class="text_in">Na</h4>
+        </div>
+        <div class="row _margin-left">
+          <h4 class="text_uefa">UEFA</h4>
+          <h4 class="text_champions">CHAMPIONS</h4>
+          <h4 class="text_league">LEAGUE</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+		<footer id="footer" class="footer">
+			<div class="wrapper">
+				<button class="button">SAIBA COMO PARTICIPAR</button>
+				<img class="uefa" src="assets/images/uefa.svg" />
+				<div class="gillette_logo">
+					<img class="logo" src="assets/images/gillette-logo.png" />
+					<img class="logo-signature" src="assets/images/gillette-logo-signature.png" />
+        </div>
+        <p class="eula _hide">
+          Correspondente aos dias de participação na promoção com sorteios quinzenais. PlayStation e PS4 são marcas registradas da Sony Interactive Entertainment Inc.. Particiapação válida para maiores de 16 anos com passaporte valido até 31/12/2020 para compras e posterior cadastro realizados entre 01/03 e 24/04/2020, para o sorteio das viagens e até 15/05/2020 para o sorteio dos videogames (horario de Brasília), limitada a 12 números da sorte por CPF. Guarde cada comprovante fiscal de compra não manual cadastrado. Antes de participar, consulte os produtos participantes e leia os Regulamentos completos no site. As palavras UEFA, CHAMPIONS LEAGUE e todas as outras marcas, nomes, logos, mascotes e troféus da UEFA CHAMPIONS LEAGUE são propriedade, marcas registradas, desenhos e/ou direitos autorais da UEFA. Todos os direitos reservados.
+        </p>
+			</div>
+    </footer>
+    
+    <script>
+      var framesDOM = {
+        frame1: document.querySelector('#frame1'),
+        frame2: document.querySelector('#frame2'),
+        frame3: document.querySelector('#frame3'),
+        frame4: document.querySelector('#frame4'),
+        frame5: document.querySelector('#frame5'),
+      };
+
+      var footerDOM = {
+        uefa: document.querySelector('#footer .uefa'),
+        logo: document.querySelector('#footer .gillette_logo'),
+        eula: document.querySelector('#footer .eula'),
+      }
+
+      function hideAllFrames() {
+        Object.keys(framesDOM).forEach(function(key) {
+          if (framesDOM[key]) framesDOM[key].classList.add('_hide');
+        });
+      };
+
+      var configuration = {};
+      configuration.frame1 = {
+        next: 'frame2',
+        background: 'assets/images/bg-1.jpg',
+        inAction: function () {
+          framesDOM.frame1.classList.remove('_hide');
+        },
+        outAction: function () {},
+        time: 2000,
+        footer: {
+          eula: false,
+          logo: true,
+          uefa: true,
+        },
+      };
+
+      configuration.frame2 = {
+        next: 'frame3',
+        background: 'assets/images/bg-1.jpg',
+        inAction: function () {
+          framesDOM.frame2.classList.remove('_hide');
+        },
+        time: 2000,
+        footer: {
+          eula: false,
+          logo: true,
+          uefa: true,
+        },
+      };
+
+      configuration.frame3 = {
+        next: 'frame4',
+        background: 'assets/images/bg-2.jpg',
+        inAction: function () {
+          framesDOM.frame3.classList.remove('_hide');
+        },
+        time: 2000,
+        footer: {
+          eula: true,
+          logo: false,
+          uefa: false,
+        },
+      };
+
+      configuration.frame4 = {
+        next: 'frame5',
+        background: 'assets/images/bg-2.jpg',
+        inAction: function () {
+          framesDOM.frame4.classList.remove('_hide');
+        },
+        time: 2000,
+        footer: {
+          eula: true,
+          logo: false,
+          uefa: false,
+        },
+      };
+
+      configuration.frame5 = {
+        next: 'frame1',
+        background: 'assets/images/bg-4.jpg',
+        inAction: function () {
+          framesDOM.frame5.classList.remove('_hide');
+        },
+        time: 2000,
+        footer: {
+          eula: false,
+          logo: true,
+          uefa: false,
+        },
+      };
+
+      function setFooter(footerData) {
+        if (footerData.eula) {
+          footerDOM.eula.classList.remove('_hide');
+        } else {
+          footerDOM.eula.classList.add('_hide');
+        }
+
+        if (footerData.logo) {
+          footerDOM.logo.classList.remove('_hide');
+        } else {
+          footerDOM.logo.classList.add('_hide');
+        }
+
+        if (footerData.uefa) {
+          footerDOM.uefa.classList.remove('_hide');
+        } else {
+          footerDOM.uefa.classList.add('_hide');
+        }
+      };
+
+      function init() {
+        function next(f) {
+          const nextFrame = configuration[f.next];
+          hideAllFrames();
+          document.querySelector('.banner').style.backgroundImage = 'url(\"' + nextFrame.background + '")';
+          setFooter(nextFrame.footer);
+          nextFrame.inAction();
+          setTimeout(function () {
+            next(nextFrame);
+          }, nextFrame.time);
+        }
+
+        setTimeout(function () {
+          next(configuration.frame1);
+        }, configuration.frame1.time);
+      };
+    </script>
+  </div>
+</body>
+</html>
