@@ -98,6 +98,7 @@
 			height: 250px;
 			background-color: #f1f1f1;
 			background-image: url("assets/images/bg-1.jpg");
+			background-size: cover;
 			overflow: hidden;
 		}
 
@@ -243,6 +244,36 @@
       line-height: 1em;
     }
 
+    /* =========== FRAME 5 ========== */
+    div.frame_5 {
+      text-align: center;
+      padding-top: 15px;
+    }
+
+    div.frame_5 > img.uefa {
+      width: 72px;
+    }
+
+    div.frame_5 > h4.text_1 {
+      font-family: Futura Std, sans-serif;
+			font-weight: 700;
+      font-size: 18px;
+      line-height: 1.4em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+
+    div.frame_5 > h4.text_2 {
+      display: inline-block;
+      max-width: 180px;
+      font-family: Futura Std, sans-serif;
+			font-weight: 300;
+      font-size: 18px;
+      line-height: 1.3em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+    }
+
 		/* =========== FOOTER =========== */
 		footer.footer {
 			position: absolute;
@@ -316,12 +347,12 @@
 		._hide {
 			display: none;
 		}
-	</style>
+  </style>
 </head>
-<body>
+<body id="page" onload="init()">
 	<div class="banner">
     <!-- FRAME 1 -->
-		<div id="frame1" class="frame_1 _hide">
+		<div id="frame1" class="frame_1">
 			<h4 class="text">QUER IR PARA</h4>
 			<h4 class="text _condensed">UEFA CHAMPIONS</h4>
     </div>
@@ -343,7 +374,7 @@
     </div>
 
     <!-- FRAME 3 -->
-    <div id="frame3" class="frame_3">
+    <div id="frame3" class="frame_3 _hide">
       <span class="number">1</span>
       <div class="text_wrapper">
         <h4 class="text_1">Compre Produtos</h4>
@@ -354,20 +385,117 @@
       <img class="products" src="assets/images/gillette-products.png" />      
     </div>
 
+    <!-- FRAME 5 -->
+    <div id="frame5" class="frame_5 _hide">
+			<img class="uefa" src="assets/images/uefa.svg" />
+			<h4 class="text_1">Cadastre</h4>
+			<h4 class="text_2">O cupom fiscal no site</h4>
+    </div>
+
     <!-- FOOTER -->
-		<footer class="footer">
+		<footer id="footer" class="footer">
 			<div class="wrapper">
 				<button class="button">CLIQUE E PARTICIPE</button>
-				<img class="uefa _hide" src="assets/images/uefa.svg" />
-				<div class="gillette_logo _hide">
+				<img class="uefa" src="assets/images/uefa.svg" />
+				<div class="gillette_logo">
 					<img class="logo" src="assets/images/gillette-logo.png" />
 					<img class="logo-signature" src="assets/images/gillette-logo-signature.png" />
         </div>
-        <p class="eula">
+        <p class="eula _hide">
           Correspondente aos dias de participação na promoção com sorteios quinzenais. PlayStation e PS4 são marcas registradas da Sony Interactive Entertainment Inc.. Particiapação válida para maiores de 16 anos com passaporte valido até 31/12/2020 para compras e posterior cadastro realizados entre 01/03 e 24/04/2020, para o sorteio das viagens e até 15/05/2020 para o sorteio dos videogames (horario de Brasília), limitada a 12 números da sorte por CPF. Guarde cada comprovante fiscal de compra não manual cadastrado. Antes de participar, consulte os produtos participantes e leia os Regulamentos completos no site. As palavras UEFA, CHAMPIONS LEAGUE e todas as outras marcas, nomes, logos, mascotes e troféus da UEFA CHAMPIONS LEAGUE são propriedade, marcas registradas, desenhos e/ou direitos autorais da UEFA. Todos os direitos reservados.
         </p>
 			</div>
-		</footer>
-	</div>
+    </footer>
+    
+    <script>
+      var framesDOM = {
+        frame1: document.querySelector('#frame1'),
+        frame2: document.querySelector('#frame2'),
+        frame3: document.querySelector('#frame3'),
+        frame4: document.querySelector('#frame4'),
+        frame5: document.querySelector('#frame5'),
+      };
+
+      var footerDOM = {
+        uefa: document.querySelector('#footer .uefa'),
+        logo: document.querySelector('#footer .gillette_logo'),
+        eula: document.querySelector('#footer .eula'),
+      }
+
+      function hideAllFrames() {
+        Object.keys(framesDOM).forEach(function(key) {
+          if (framesDOM[key]) framesDOM[key].classList.add('_hide');
+        });
+      };
+
+      var configuration = {};
+      configuration.frame1 = {
+        next: 'frame2',
+        background: 'assets/images/bg-1.jpg',
+        inAction: function () {
+          framesDOM.frame1.classList.remove('_hide');
+        },
+        outAction: function () {},
+        time: 2000,
+        footer: {
+          eula: false,
+          logo: true,
+          uefa: true,
+        },
+      };
+
+      configuration.frame2 = {
+        next: 'frame1',
+        background: 'assets/images/bg-2.jpg',
+        inAction: function () {
+          framesDOM.frame2.classList.remove('_hide');
+        },
+        time: 2000,
+        footer: {
+          eula: true,
+          logo: false,
+          uefa: false,
+        },
+      };
+
+      function setFooter(footerData) {
+        if (footerData.eula) {
+          footerDOM.eula.classList.remove('_hide');
+        } else {
+          footerDOM.eula.classList.add('_hide');
+        }
+
+        if (footerData.logo) {
+          footerDOM.logo.classList.remove('_hide');
+        } else {
+          footerDOM.logo.classList.add('_hide');
+        }
+
+        if (footerData.uefa) {
+          footerDOM.uefa.classList.remove('_hide');
+        } else {
+          footerDOM.uefa.classList.add('_hide');
+        }
+      };
+
+      function init() {
+        function next(f) {
+          const nextFrame = configuration[f.next];
+          hideAllFrames();
+          console.log(nextFrame.background);
+          document.querySelector('.banner').style.backgroundImage = 'url(\"' + nextFrame.background + '")';
+          setFooter(nextFrame.footer);
+          nextFrame.inAction();
+          setTimeout(function () {
+            next(nextFrame);
+          }, nextFrame.time);
+        }
+
+        setTimeout(function () {
+          next(configuration.frame1);
+        }, configuration.frame1.time);
+      };
+    </script>
+  </div>
 </body>
 </html>
