@@ -83,7 +83,7 @@
 			width: 300px;
 			height: 250px;
 			background-color: #f1f1f1;
-			background-image: url("assets/images/bg-7.png");
+			background-image: url("assets/images/bg-1.jpg");
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -91,6 +91,100 @@
 		}
 
 		/* =========== FRAME 1 ========== */
+		div.frame_1 {
+			font-family: Futura Std, sans-serif;
+      text-align: center;
+      padding-top: 15px;
+			color: #FFFFFF;
+			text-transform: uppercase;
+		}
+
+		div.frame_1 > h4.text {
+			margin-left: auto;
+			margin-right: auto;
+			font-weight: 300;
+			font-size: 14px;
+			max-width: 168px;
+		}
+
+		div.frame_1 > h4.text > strong {
+			font-weight: 700;
+			color: #FFCB05;
+		}
+
+		div.frame_1 > img.logo {
+			width: 90px;
+			margin: 4px;
+		}
+
+		div.frame_1 > img.uefa {
+			width: 52px;
+		}
+
+		div.frame_1 > h4.uefa_text {
+			font-size: 14px;
+			font-weight: 700;
+			font-stretch: condensed;
+		}
+
+		/* =========== FRAME 2 ========== */
+		div.frame_2 {
+			font-family: Futura Std, sans-serif;
+      text-align: center;
+      padding-top: 15px;
+			color: #FFFFFF;
+			text-transform: uppercase;
+		}
+
+		div.frame_2 > img.uefa {
+			width: 52px;
+		}
+
+		div.frame_2 > div {
+			margin-top: 20px;
+		}
+
+		div.frame_2 > div > h4.text {
+			margin-left: auto;
+			margin-right: auto;
+			font-weight: 200;
+			font-size: 14px;
+			line-height: 1.4em;
+			max-width: 210px;
+		}
+
+		div.frame_2 > div > h4.text > strong {
+			font-weight: 700;
+			color: #FFCB05;
+		}
+
+		/* =========== FRAME 3 ========== */
+		div.frame_3 {
+			font-family: Futura Std, sans-serif;
+      text-align: center;
+      padding-top: 15px;
+			color: #FFFFFF;
+			text-transform: uppercase;
+		}
+
+		div.frame_3 > img.uefa {
+			width: 52px;
+		}
+
+		div.frame_3 > h4.text {
+			margin-top: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			font-weight: 200;
+			font-size: 16px;
+			line-height: 1.4em;
+			max-width: 180px;
+		}
+
+		div.frame_3 > h4.text > strong {
+			font-weight: 700;
+			color: #FFCB05;
+		}
 
 		/* =========== FRAME 4 ========== */
 		div.frame_4 {
@@ -100,7 +194,7 @@
 		}
 
 		div.frame_4 h4 {
-			display: inline-block;
+			margin-left: auto;
 			color: #FFFFFF;
 		}
 
@@ -128,6 +222,7 @@
 		} 
 
 		div.frame_4 > div.text_wrapper > div.row > h4.text_you {
+			display: inline-block;
 			font-family: Futura Std, sans-serif;
 			font-weight: 900;
       font-stretch: condensed;     
@@ -146,6 +241,7 @@
       font-size: 19px;
 			text-transform: uppercase;
       line-height: 1em;
+			display: inline-block;
       margin-left: 5px;
       vertical-align: middle;
 		} 
@@ -160,6 +256,7 @@
     div.frame_4 > div.text_wrapper > div.row > h4.text_champions,
     div.frame_4 > div.text_wrapper > div.row > h4.text_league {
 			font-family: Futura Std, sans-serif;
+			display: inline-block;
 			font-weight: 700;
       font-size: 12px;
 			margin-left: -8px;
@@ -229,7 +326,7 @@
 		}
 
 		footer.footer > div.wrapper > p.eula {
-      width: 100%;
+      max-width: 150px;
 			position: absolute;
       bottom: 0px;
       left: 0;
@@ -246,7 +343,7 @@
 		}
 	</style>
 </head>
-<body id="banner_8" onload="">
+<body id="banner_8" onload="init()">
 	<div class="banner">
 		<!-- FRAME 1 -->
 		<div id="frame1" class="frame_1">
@@ -254,7 +351,23 @@
 			<h4 class="text">Você <strong>já garantiu</strong> seus produtos</h4>		
 			<img class="logo" src="assets/images/gillette-logo.png" />
 			<h4 class="text">Edição especial</h4>			
-			<h4 class="text"><span>UEFA</span><span>champions</span><span>league</span></h4>			
+			<h4 class="uefa_text"><span>UEFA</span>&nbsp;<span>champions</span>&nbsp;<span>league!</span></h4>			
+		</div>
+
+		<!-- FRAME 2 -->
+		<div id="frame2" class="frame_2 _hide">
+			<img class="uefa" src="assets/images/uefa.svg" />
+			<div>
+				<h4 class="text">Vai deixar pra cadastrar</h4>		
+				<h4 class="text">os cupons fiscais</h4>		
+				<h4 class="text">só nos <strong>acréscimos?</strong></h4>		
+			</div>
+		</div>
+
+		<!-- FRAME 3 -->
+		<div id="frame3" class="frame_3 _hide">
+			<img class="uefa" src="assets/images/uefa.svg" />
+			<h4 class="text">Falta poucos dias, <strong>não perca!</strong></h4>		
 		</div>
 
 		<!-- FRAME 4 -->
@@ -266,8 +379,8 @@
 					<h4 class="text_in">Na</h4>
 				</div>
 				<div class="row _margin-left">
-					<h4 class="text_uefa">UEFA</h4>
-					<h4 class="text_champions">CHAMPIONS</h4>
+					<h4 class="text_uefa">UEFA &nbsp;</h4>
+					<h4 class="text_champions">CHAMPIONS &nbsp;</h4>
 					<h4 class="text_league">LEAGUE</h4>
 				</div>
 			</div>
@@ -277,12 +390,12 @@
 		<!-- FOOTER -->
 		<footer id="footer" class="footer">
 			<div class="wrapper">
-				<button class="button">CADASTR-SE AGORA</button>
-				<div class="gillette_logo _hide">
+				<button class="button">CADASTRE-SE AGORA</button>
+				<div class="gillette_logo">
 					<img class="logo" src="assets/images/gillette-logo.png" />
 					<img class="logo-signature" src="assets/images/gillette-logo-signature.png" />
 				</div>
-				<p class="eula _hide">
+				<p class="eula">
 					Para maiores informações acesse o regulamento em www.promocaogillette.com.br. Certificados de Autorização SECAP/ME 04.007152/2019 e 04.007153/2019. As palavras UEFA, CHAMPIONS LEAGUE e todas as outras marcas, nomes, logos, mascotes e troféus da UEFA CHAMPIONS LEAGUE são propriedade, marcas registradas, desenhos e/ou direitos autorais da UEFA. Todos os direitos reservados.
         </p>
 			</div>
@@ -312,59 +425,59 @@
       var configuration = {};
       configuration.frame1 = {
         next: 'frame2',
-        background: 'assets/images/bg-7.png',
+        background: 'assets/images/bg-1.jpg',
         inAction: function () {
           framesDOM.frame1.classList.remove('_hide');
         },
         outAction: function () {},
-        time: 2000,
+        time: 5000,
         footer: {
-          eula: false,
-          logo: false,
+          eula: true,
+          logo: true,
           uefa: false,
-          callAction: false,
+          callAction: true,
         },
       };
 
       configuration.frame2 = {
         next: 'frame3',
-        background: 'assets/images/bg-6.png',
+        background: 'assets/images/bg-2.png',
         inAction: function () {
           framesDOM.frame2.classList.remove('_hide');
         },
-        time: 2000,
+        time: 3000,
         footer: {
-          eula: true,
-          logo: false,
+          eula: false,
+          logo: true,
           uefa: false,
-					callAction: false,
+					callAction: true,
         },
       };
       
 			configuration.frame3 = {
         next: 'frame4',
-        background: 'assets/images/bg-8.png',
+        background: 'assets/images/bg-2.png',
         inAction: function () {
           framesDOM.frame3.classList.remove('_hide');
         },
-        time: 2000,
+        time: 4000,
         footer: {
-          eula: true,
-          logo: false,
+          eula: false,
+          logo: true,
           uefa: false,
-					callAction: false,
+					callAction: true,
         },
       };
 			
 			configuration.frame4 = {
         next: 'frame1',
-        background: 'assets/images/bg-8.png',
+        background: 'assets/images/bg-6.png',
         inAction: function () {
           framesDOM.frame4.classList.remove('_hide');
         },
-        time: 2000,
+        time: 3000,
         footer: {
-          eula: true,
+          eula: false,
           logo: false,
           uefa: false,
 					callAction: true,
@@ -385,9 +498,9 @@
         }
 
         if (footerData.uefa) {
-          footerDOM.uefa.classList.remove('_hide');
+          // footerDOM.uefa.classList.remove('_hide');
         } else {
-          footerDOM.uefa.classList.add('_hide');
+          // footerDOM.uefa.classList.add('_hide');
         }
         if (footerData.callAction) {
           footerDOM.callAction.classList.remove('_hide');
@@ -400,7 +513,6 @@
         function next(f) {
           const nextFrame = configuration[f.next];
           hideAllFrames();
-          console.log(nextFrame.background);
           document.querySelector('.banner').style.backgroundImage = 'url(\"' + nextFrame.background + '")';
           setFooter(nextFrame.footer);
           nextFrame.inAction();
