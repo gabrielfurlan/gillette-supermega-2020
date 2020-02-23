@@ -130,6 +130,26 @@
       text-transform: uppercase;
     }
 
+		/* =========== FRAME 2 ========== */
+		div.frame_2 {
+			text-align: center;
+			padding-top: 70px;
+		}
+
+		div.frame_2 h4.text {
+			font-family: Futura Std, sans-serif;
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 27px;
+			color: #FFFFFF;
+			letter-spacing: 2px;
+			
+		}
+		
+		div.frame_2 h4.text .diferent {
+      color: #FFCB05;
+			font-weight: 700;
+		}
 
 		/* =========== FRAME 3 =========== */
     div.frame_3 {
@@ -401,17 +421,23 @@
 		}
   </style>
 </head>
-<body id="page" onload="">
+<body id="page" onload="init();">
 	<div class="banner">
     <!-- FRAME 1 -->
-    <div id="frame1" class="frame_1 _hide">
+    <div id="frame1" class="frame_1">
       <h4 class="text_1">Você já sonhou</h4>
       <h4 class="text_2">Em ir para a</h4>
       <h4 class="text_3">UEFA CHAMPIONS LEAGUE</h4>
     </div>
 
+    <!-- FRAME 2 -->
+		<div id="frame2" class="frame_2 _hide">
+      <h4 class="text">CHEGOU A HORA DE</h4>
+      <h4 class="text">REALIZAR ESSE <span class="diferent">SONHO!</span></h4>
+    </div>
+
     <!-- FRAME 3 -->
-    <div id="frame3" class="frame_3">
+    <div id="frame3" class="frame_3 _hide">
       <div class="wrapper">
         <img class="logo" src="assets/images/gillette-logo.png" />
         <h4 class="title">Está sorteando</h4>
@@ -494,7 +520,7 @@
       var configuration = {};
       configuration.frame1 = {
         next: 'frame2',
-        background: 'assets/images/bg-1.jpg',
+        background: 'assets/images/bg-1.png',
         inAction: function () {
           framesDOM.frame1.classList.remove('_hide');
         },
@@ -509,11 +535,12 @@
 
       configuration.frame2 = {
         next: 'frame3',
-        background: 'assets/images/bg-1.jpg',
+        background: 'assets/images/bg-2.png',
         inAction: function () {
           framesDOM.frame2.classList.remove('_hide');
+          framesDOM.frame2.style.backgroundSize = '300%';
         },
-        time: 2000,
+        time: 3000,
         footer: {
           eula: false,
           logo: true,
@@ -523,11 +550,11 @@
 
       configuration.frame3 = {
         next: 'frame4',
-        background: 'assets/images/bg-2.jpg',
+        background: 'assets/images/bg-3.jpg',
         inAction: function () {
           framesDOM.frame3.classList.remove('_hide');
         },
-        time: 2000,
+        time: 4000,
         footer: {
           eula: true,
           logo: false,
@@ -537,11 +564,11 @@
 
       configuration.frame4 = {
         next: 'frame5',
-        background: 'assets/images/bg-2.jpg',
+        background: 'assets/images/bg-3.jpg',
         inAction: function () {
           framesDOM.frame4.classList.remove('_hide');
         },
-        time: 2000,
+        time: 4000,
         footer: {
           eula: true,
           logo: false,
@@ -559,7 +586,7 @@
         footer: {
           eula: false,
           logo: true,
-          uefa: false,
+          uefa: true,
         },
       };
 
