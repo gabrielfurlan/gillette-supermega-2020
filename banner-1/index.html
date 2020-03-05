@@ -97,7 +97,7 @@
 			width: 300px;
 			height: 250px;
 			background-color: #f1f1f1;
-			background-image: url("assets/images/bg-1.jpg");
+			background-image: url("assets/images/bg-1.png");
 			background-size: cover;
 			overflow: hidden;
 		}
@@ -184,14 +184,10 @@
 			left: 10px;
 		}
 		
-		footer.footer > div.wrapper > div.gillette_logo {
+		footer.footer > div.wrapper > img.gillette_logo {
 			position: absolute;
-			width: 200px;
-			height: 100%;
-			bottom: -7px;
+			bottom: 0;
 			right: 0;
-			background-image: url("assets/images/wedge.png");
-			background-size: cover;
 		}
 
 		footer.footer > div.wrapper > div.gillette_logo > img.logo {
@@ -264,11 +260,8 @@
 		<footer id="footer" class="footer">
 			<div class="wrapper">
 				<button class="button">CLIQUE E PARTICIPE</button>
-				<img class="uefa" src="assets/images/uefa.svg" />
-				<div class="gillette_logo">
-					<img class="logo" src="assets/images/gillette-logo.png" />
-					<img class="logo-signature" src="assets/images/gillette-logo-signature.png" />
-        </div>
+        <img class="uefa" src="assets/images/uefa.svg" />
+				<img src="assets/images/gilltte-logo-wedge.png" class="gillette_logo">
         <p class="eula _hide">
           Correspondente aos dias de participação na promoção com sorteios quinzenais. PlayStation e PS4 são marcas registradas da Sony Interactive Entertainment Inc.. Particiapação válida para maiores de 16 anos com passaporte valido até 31/12/2020 para compras e posterior cadastro realizados entre 01/03 e 24/04/2020, para o sorteio das viagens e até 15/05/2020 para o sorteio dos videogames (horario de Brasília), limitada a 12 números da sorte por CPF. Guarde cada comprovante fiscal de compra não manual cadastrado. Antes de participar, consulte os produtos participantes e leia os Regulamentos completos no site. As palavras UEFA, CHAMPIONS LEAGUE e todas as outras marcas, nomes, logos, mascotes e troféus da UEFA CHAMPIONS LEAGUE são propriedade, marcas registradas, desenhos e/ou direitos autorais da UEFA. Todos os direitos reservados.
         </p>
@@ -305,7 +298,7 @@
           framesDOM.frame1.classList.remove('_hide');
         },
         outAction: function () {},
-        time: 2000,
+        time: 2500,
         footer: {
           eula: false,
           logo: true,
@@ -319,7 +312,7 @@
         inAction: function () {
           framesDOM.frame2.classList.remove('_hide');
         },
-        time: 2000,
+        time: 2500,
         footer: {
           eula: false,
           logo: true,
@@ -333,7 +326,7 @@
         inAction: function () {
           framesDOM.frame3.classList.remove('_hide');
         },
-        time: 5000,
+        time: 2500,
         footer: {
           eula: true,
           logo: false,
@@ -347,7 +340,7 @@
         inAction: function () {
           framesDOM.frame4.classList.remove('_hide');
         },
-        time: 4000,
+        time: 2500,
         footer: {
           eula: true,
           logo: false,
@@ -361,7 +354,7 @@
         inAction: function () {
           framesDOM.frame5.classList.remove('_hide');
         },
-        time: 2000,
+        time: 2500,
         footer: {
           eula: true,
           logo: false,
@@ -374,7 +367,7 @@
         inAction: function () {
           framesDOM.frame6.classList.remove('_hide');
         },
-        time: 2000,
+        time: 2500,
         footer: {
           eula: false,
           logo: true,
